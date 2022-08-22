@@ -12,15 +12,12 @@
         ul.parentElement.parentElement.classList.toggle('appear');
     });
     
-    ul.addEventListener('click', () => {
-      open.classList.remove('hidden');
-      ul.childNodes.forEach(list => {
-        list.addEventListener('click', () => {
-          open.classList.remove('hidden');
-          ul.parentElement.parentElement.classList.remove('appear');
-        });
+    ul.childNodes.forEach(list => {
+      list.addEventListener('click', () => {
+        open.classList.remove('hidden');
+        document.getElementById('menu').classList.remove('appear');
       });
-    });  
+    });
   }
   
   
