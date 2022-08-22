@@ -1,0 +1,498 @@
+/* --------------------------------- 
+common
+-----------------------------------*/
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+img {
+  box-shadow: 4px 4px rgb(134, 134, 134);
+  border-radius: 12px;
+  cursor: pointer;
+  border: 1px solid #eee;
+  vertical-align: bottom;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.container {
+  max-width: 1000px;
+  width: 70%;
+  margin: 0 auto;
+  /* background-color: #eee; */
+}
+
+h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: normal;
+  text-align: center;
+  padding: 64px 0;
+}
+
+
+/* z-index */
+
+/* 
+header 2
+header > #menu-open 4
+#menu 3
+*/
+
+
+/* --------------------------------- 
+header
+-----------------------------------*/
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 85px;
+  opacity: 0;
+  box-shadow: none;
+  z-index: 1;
+  background-color: white;
+  transition: background-color .5s, opacity .5s;
+}
+
+header.appear {
+  opacity: 0.95;
+  background-color: rgb(230, 255, 241);
+  box-shadow: 0 0 4px rgb(170, 170, 170);
+}
+
+header > #header-logo {
+  display: flex;
+  align-items: center;
+}
+
+header #header-logo > #header-icon {
+  font-size: 32px;
+  
+}
+header #header-logo > h1 {
+  font-size: 32px;
+  font-weight: normal;
+}
+
+
+/* headerのposition: fixed;のための高さ調整 */
+/* #target {
+  height: 85px;
+} */
+
+/* ----------------------------
+menu
+----------------------------- */
+#menu-open {
+  width: 32px;
+  height: 26px;
+  position: fixed;
+  top: 32px;
+  right: 6%;
+  left: auto;
+  cursor: pointer;
+  z-index: 3;
+}
+
+#menu-open span {
+  position: absolute;
+  background-color: black;
+  width: 35px;
+  height: 2px;
+  top: 0;
+  right: 0;
+  transform: none;
+  opacity: 1;
+  transition: all .3s;
+}
+
+#menu-open span:nth-child(2) {
+  top: 12px;
+}
+#menu-open span:nth-child(3) {
+  top: 24px;
+}
+
+#menu-open.hidden span {
+  top: 12px;
+}
+
+#menu-open.hidden span:nth-child(1){
+  transform: rotate(-135deg);
+}
+
+#menu-open.hidden span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-open.hidden span:nth-child(3){
+  transform: rotate(135deg);
+}
+
+/* hero */
+
+.hero {
+  min-height: 700px;
+  position: relative;
+}
+
+.hero h1 {
+  position: absolute;
+  right: 10%;
+  bottom: 20%;
+  animation-name: hero-delay;
+  animation-duration: 1.8s;
+  text-align: center;
+  color: white;
+  letter-spacing: 12px;
+  align-self: center;
+  font-size: 1.8rem;
+}
+
+.hero img {
+  position: absolute;
+  min-height: 600px;
+  max-height: 700px;
+  top: 0;
+  width: 100%;
+  animation-name: hero;
+  animation-duration: .9s;
+  z-index: -1;
+  background-size: cover;
+}
+
+
+/* main */
+
+main {
+  padding: 128px 0;
+  
+}
+
+main section {
+  background-color: rgb(230, 255, 241);
+  padding: 96px 64px;
+}
+
+main section + section {
+  border-top: 1px solid #eee;
+}
+
+.access {
+  text-align: center;
+  padding: 64px 0 32px;
+}
+
+.access a {
+  opacity: 1;
+  font-size: .95rem;
+  display: inline-block;
+  margin: 0 auto;
+  transition: opacity .3s;
+}
+
+.access a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+/* section profile */
+
+.profile .author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile .author img {
+  border-radius: 50%;
+}
+/* sectin skills */
+.skills-imgs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skills-imgs img {
+  width: 30%;
+  vertical-align: bottom;
+  background-color: white;
+}
+
+/* section hobby */
+.hobby-imgs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hobby-imgs img {
+  width: 30%;
+  border-radius: 50%;
+}
+
+@keyframes hero {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: .6;
+    transform: none;
+  }
+}
+
+@keyframes hero-delay {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* レスポンシブ対応 */
+
+@media(max-width: 700px){
+  .profile .author,
+  .hobby-imgs,
+  .skills-imgs {
+    flex-direction: column;
+    align-items: center;
+    gap: 64px 0;
+  }
+
+  .hobby-imgs img,
+  .skills-imgs img {
+    width: 75%;
+  }
+
+
+  .hobby-imgs img:nth-child(2).appear,
+  .hobby-imgs img:nth-child(3).appear {
+    transition-delay: unset;
+  }
+
+  .skills-imgs img:nth-child(2),
+  .hobby-imgs img:nth-child(1),
+  .hobby-imgs img:nth-child(3)  {
+    transform: translateX(-30px);
+  }
+
+  .skills-imgs img:nth-child(1),
+  .skills-imgs img:nth-child(3),
+  .hobby-imgs img:nth-child(2) {
+    transform: translateX(30px);
+  }
+
+}
+
+/* API animation */
+#profile-img,
+.hobby-imgs img,
+.skills-imgs img{
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform .3s, opacity .3s;
+}
+
+#profile-img.appear,
+.hobby-imgs img.appear,
+.skills-imgs img.appear {
+  transform: none;
+  opacity: 1;
+}
+
+#profile-img.appear:hover,
+.hobby-imgs img.appear:hover,
+.skills-imgs img.appear:hover {
+  opacity: .8;
+}
+
+.hobby-imgs img:nth-child(2).appear{
+  transition-delay: .3s;
+}
+
+.hobby-imgs img:nth-child(3).appear{
+  transition-delay: .6s;
+}
+
+/* --------------------------------- 
+menu
+-----------------------------------*/
+
+#menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(225, 225, 225);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+  z-index: 2;
+}
+
+#menu > nav {
+  margin-left: 45%;
+}
+
+#menu >nav > ul {
+  padding-top: 150px;
+  width: 150px;
+}
+
+#menu > nav > ul li {
+  user-select: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+#menu > nav > ul li + li {
+  padding-top: 20px;
+}
+
+/* -------------menuに関するanimation------------- */
+/* menu-iconクリック時のmenuの表示 */
+#menu.appear {
+  pointer-events: auto;
+  opacity: .95;
+}
+
+
+/* -----------------menuリストのanimation-------------------- */
+
+#menu > nav > ul li:nth-child(1),
+#menu > nav > ul li:nth-child(2),
+#menu > nav > ul li:nth-child(3),
+#menu > nav > ul li:nth-child(8) {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: opacity .3s, transform .3s;
+}
+
+#menu.appear > nav > ul li:nth-child(1),
+#menu.appear > nav > ul li:nth-child(2),
+#menu.appear > nav > ul li:nth-child(3),
+#menu.appear > nav > ul li:nth-child(8) {
+  transform: none;
+  opacity: 1;
+}
+
+#menu.appear > nav > ul li:nth-child(2) {
+  transition-delay: .1s;
+}
+
+#menu.appear > nav > ul li:nth-child(3) {
+  transition-delay: .2s;
+}
+
+#menu.appear > nav > ul li:nth-child(8) {
+  transition-delay: .3s;
+}
+
+/* ----------menuリスト(skills,hobby)クリック時のanimation--------- */
+#menu > nav > ul .click1-details,
+#menu > nav > ul .click2-details {
+    display: none;
+}
+
+#menu > nav > ul li.appear {
+  display: block;
+  animation-name: move;
+  animation-duration: .5s;
+} 
+
+/* display: none;で指定しているためanimationで対応 */
+@keyframes move {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  100%{
+    transform: none;
+    opacity: 1;
+  }
+}
+
+#to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  font-size: 32px;
+  cursor: pointer;
+  display: none;  
+}
+
+#to-top.appear {
+  display: block;
+}
+
+/* --------------------------------- 
+footer
+-----------------------------------*/
+
+footer {
+  height: 400px;
+  position: relative;
+  background-color: rgb(230, 255, 241);
+  box-shadow: 0 -2px #eee;
+}
+
+.footer-navi {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-text {
+  user-select: none;
+  padding: 32px 0;
+  cursor: pointer;
+}
+
+article ul li + li {
+  padding-top: 16px;
+}
+
+.sns-text {
+  display: flex;
+  cursor: pointer;
+}
+
+.sns-text li {
+  padding-right: 12px;
+}
+
+.sns-text:nth-child(2) li,
+.sns-text:nth-child(2) a {
+  padding-top: 16px;
+}
+
+small {
+  position: absolute;
+  bottom: 32px;
+  right: 10%;
+}

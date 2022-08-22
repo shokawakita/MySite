@@ -1,0 +1,12 @@
+#to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  font-size: 32px;
+  cursor: pointer;
+  display: none;  
+}
+
+#to-top.appear {
+  display: block;
+}

@@ -1,0 +1,338 @@
+/* common【全体・header・footer】のレイアウト */
+/* common:各htmlファイルの共通スタイル */
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+ul {
+  padding-inline-start: unset;
+  margin-block: unset;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%; 
+  height: auto;
+}
+
+.container {
+  width: calc(100% - 64px);
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+/* 　common「メニュー」タブ一覧時のレイアウト */
+#menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: black;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+  .appear {
+    pointer-events: auto;
+    opacity: 0.8;
+  }
+
+}
+
+#menu-list {
+  position: relative;
+}
+
+#menu-list ul {
+  transform: translateX(-150px);
+  transition: transform .3s;
+  color: white;
+  padding-top: 50px;
+}
+
+#menu-list ul.appear {
+  transform: translateX(0);
+}
+
+
+#menu-list li {
+  padding-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+#open-btn {
+  position: relative;
+}
+
+#open {
+  font-size: 3rem;
+  position: absolute;
+  top: -20px;
+  right: 0;
+  padding: 5px 0;
+  opacity: 1;
+  transform: rotate(0);
+  cursor: pointer;
+  transition: opacity .3s, transform .3s;
+}
+
+#open.hidden {
+  opacity: 0;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+#close {
+  opacity: 0;
+  transform: rotate(45deg);
+  transition: opacity .3s, transform .3s;
+  font-size: 3rem;
+  position: absolute;
+  top: 16px;
+  left: auto;
+  right: 0;
+  cursor: pointer;
+  z-index: 10;
+  padding: 5px 0;
+  color: white;
+  pointer-events: none;
+}
+
+#close.appear {
+  pointer-events: auto;
+  opacity: 1;
+  transform: rotate(0);
+}
+
+
+/* common-headerのレイアウト */
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 32px;
+  left: 32px;
+  padding: 30px 0;
+  background: white;
+  z-index: 3;
+}
+  
+
+#header-logo {
+  width: 180px;
+}
+
+/* common-footerのレイアウト */
+footer {
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+#sns {
+  display: flex;
+  opacity: 0.7;
+}
+
+#sns li {
+  padding-right: 20px;
+  
+}
+
+small {
+  opacity: 0.7;
+}
+
+/* 各ページ【Top・Products・Products-detail・About・Company】のレイアウト */
+/* Topのスタイル */
+main {
+  padding-top: 81px;
+}
+
+#theme {
+  padding: 30px 0;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-row: auto;
+  gap: 35px 35px;
+}
+
+.item img {
+  opacity: 1;
+  transition: opacity .3s;
+  cursor: pointer;
+}
+
+.item a {
+  display: block;
+}
+.item img:hover {
+  opacity: 0.7;
+  z-index: 1;
+}
+
+#item-list p,#item-list2 p {
+  font-size: 0.75rem;
+  margin-block: unset;
+}
+
+#view-more {
+  display: block;
+  text-align: center;
+  padding: 30px 0 50px 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Productsで使用するイベント関係のプロパティ*/
+#selected-page {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+
+#selected-page li:nth-child(2) {
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+/* Productsイベント時に表示を編集するプロパティ */
+#item-list2 {
+  display: none;
+}
+
+#item-list.hidden {
+  display: none;
+}
+
+#item-list2.appear {
+  display: grid;
+}
+
+/* Products-detailのスタイル */
+.detail-area {
+  padding-bottom: 50px;
+}
+
+.detail-area a {
+  display: block;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 0.8rem;
+}
+
+#product-title {
+  padding-top: 130px;
+}
+
+.detail-list {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  font-size: 0.9rem;
+}
+
+#selected-product {
+  width: 50%;
+}
+
+.article {
+  width: 40%;
+}
+
+.article p {
+  margin-block: unset;
+  padding-bottom: 25px;
+}
+
+.article td {
+  padding-right: 20px;
+}
+
+/* Aboutのスタイル */
+.about p {
+  padding-bottom: 30px; 
+  width: 600px;
+}
+
+.about p:first-child {
+  padding-top: 120px;
+}
+
+.about p:last-child {
+  padding-bottom: 190px;
+}
+
+/* Companyのスタイル */
+.company {
+  font-size: 0.9rem;
+  padding-bottom: 30px;
+}
+
+.company p {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+.company ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  border-bottom: 1px solid rgb(204, 201, 201);
+}
+
+.company ul:nth-child(7) {
+  border-bottom: unset;
+}
+
+.company ul li {
+  padding: 20px 0 20px 0;
+}
+
+.company ul li:nth-child(odd){
+  width: 30%;
+  padding-left: 10px;
+}
+
+.company ul li:nth-child(even){
+  width: calc(70%-10px);
+}
+
+#google-map {
+  display: block;
+  padding: 10px 0 30px 10px;
+  width: 600px;
+  height: 300px;
+}
+
+/* レスポンシブデザイン */
+@media(max-width: 900px){
+  #item-list {
+      grid-template-columns: repeat(2, auto);
+      grid-row: auto;
+
+  }
+  footer {
+      display: block;
+      position: unset;
+  }
+}

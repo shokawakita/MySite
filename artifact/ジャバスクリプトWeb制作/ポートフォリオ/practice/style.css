@@ -1,0 +1,99 @@
+/* 共通スタイル */
+
+body {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    width: 35%;
+    margin: 0 auto;
+}
+
+p {
+    margin-block: unset;
+}
+
+.contents {
+    padding-bottom: 50px;
+}
+
+.sec-title {
+    font-weight: normal;
+}
+
+h2 {
+    text-align: center;
+    padding: 30px;
+    font-weight: normal;
+}
+
+/* headerのレイアウト */
+
+header {
+    background: rgb(240, 238, 238);
+    height: 190px;
+}
+
+.header-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+#profile {
+    width: 30%;
+    border-radius: 50%;
+} 
+
+.header-text {
+    width: 60%;
+}
+
+#name {
+    font-size: 1.4rem;
+}
+
+#blog, #photos {
+    display: inline-block;
+    width: 20px;
+}
+
+/*footerのレイアウト */
+ 
+footer {
+    height: 120px;
+    position: relative;
+}
+
+footer p {
+    position: absolute;
+    top: 40%;
+    right: 33%;
+    opacity: 0.4;
+    font-size: 0.8rem;
+}
+
+/* animation */
+.works {
+    opacity: 0;
+    transition: opacity .3s, transform .3s;
+}
+
+.slide-left {
+    transform: translateX(30px);
+}
+
+.slide-right {
+    transform: translateX(-30px);
+}
+
+.works.appear {
+    opacity: 1;
+    transform: none; 
+}

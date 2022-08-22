@@ -1,0 +1,255 @@
+/* 共通レイアウト */
+body {
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 800px;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+}
+
+h2 {
+    margin-block: unset;  
+    color: rgb(37, 13, 108);  
+}
+
+.sec-title {
+    padding: 50px 0;
+    text-align: center;
+    font-weight: normal;
+    opacity: 0.6;
+}
+
+button {
+    background: green;
+    height: 36px;
+    width: 160px;
+    border: unset;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    padding: 8px 30px;  
+}
+
+img {
+    display: inline-block;
+    
+}
+
+.contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+#page-top {
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    opacity: 0;
+    transition: opacity .3s;
+    color: rgb(37, 13, 108);
+}
+
+#page-top.appear {
+    opacity: 1;
+}
+
+#page-top i {
+    font-size: 32px;
+    background: white;
+    margin: 0 -16px;
+    border-radius: 30px;
+}
+
+
+/* headerのレイアウト*/
+
+header {
+    padding: 16px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: background-color .3s, box-shadow .3s;
+    z-index: 1;
+}
+   
+
+header.appear {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logo img {
+    width: 230px;
+}
+
+/* 背景画像 */
+.background {
+    background: rgb(165, 216, 255);
+    padding-top: 68px;
+    width: auto;
+}
+
+.downroad {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    justify-content: space-between;
+
+}
+
+.downroad-text {
+    width: 45%;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.downroad-text h2 {
+    font-weight: normal;
+    opacity: 0.6;
+}
+
+.downroad img {
+    width: 45%;
+}
+
+/* mainセクション */
+
+.contents:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.sec-text {
+    width: 55%; 
+}
+
+.sec-text h3 {
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+.contents img {
+    width: 35%;
+}
+
+/* messageセクション */
+
+.message {
+    background: rgb(165, 216, 255);;
+}
+
+.message-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.comment {
+    width: 28%;
+    background: white;
+    border-radius: 15px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user {
+    display: flex;
+    text-align: center;
+}
+
+.user img {
+    width: 50px;
+    padding-right: 5px;
+}
+
+/* startセクション */
+.start {
+    background: rgb(133, 191, 235);
+    height: 250px;
+    text-align: center;
+}
+
+#start-button {
+    margin: 50px;
+}
+
+/* footerセクション */
+footer {
+    background: rgb(53, 52, 52);
+    height: 90px;
+    text-align: center;
+    padding-top: 70px;
+}
+
+small {
+    color: white;
+}
+
+/* animation */
+/* スライド */
+.animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .3s, transform .3s;
+}
+
+.animate.appear {
+    opacity: 1;
+    transform: none;
+}
+
+.slide-left {
+    transform: translateX(40px);
+}
+
+.slide-right {
+    transform: translateX(-40px);
+}
+
+.delay {
+    transition-delay: .3s;
+}
+
+.delay-more {
+    transition-delay: .6s;
+}
+
+/* レスポンシブデザイン */
+@media(max-width: 600px) {
+
+    .downroad, .container, .message-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contents {
+        flex-direction: column-reverse;
+    }
+    .contents img, .sec-text {
+        width: 85%;
+    }
+
+    .contents:nth-child(2){
+        flex-direction: row;
+        flex-direction: column-reverse;
+    }
+
+    .comment {
+        margin-bottom: 20px;
+        width: 70%; 
+    } 
+
+ 
+}

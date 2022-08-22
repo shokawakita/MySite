@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0; 
+}
+
+#click {
+  width: 200px;
+  height: 200px;
+  margin: 30px auto;
+  font-size: 42px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+  background: red;
+  box-shadow: 0 10px 0 rgb(194, 74, 74);
+  text-align: center;
+  line-height: 200px;
+  color: white;
+}
+
+#click:hover {
+  opacity: 0.9;
+}
+
+#click:active {
+  margin-top: 35px;
+  box-shadow: 0 5px 0 rgb(194, 74, 74);
+}

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="icon" href="imgs/main/icon.png">
+  <link rel="stylesheet" href="css/pages/main.css">
+  <link rel="stylesheet" href="css/common/_common.css">
+  <link rel="stylesheet" href="css/common/_header.css">
+  <link rel="stylesheet" href="css/common/_footer.css">
+  <link rel="stylesheet" href="css/common/_menu.css">
+  <link rel="stylesheet" href="css/common/_pageback.css">
+  <title>My Site</title>
+</head>
+
+<body>
+  <header>
+    <div class="container" id="header-logo">
+      <div id="header-icon"><i class="bi bi-send-fill"></i></div>
+      <h1>My Site(練習用)</h1>
+    </div>
+  </header>
+  <div id="target"></div>
+
+  <section  id="header" class="hero">
+    <h1>My Site</h1>
+    <img src="imgs/main/hero.jpeg" alt="hero">
+  </section>
+
+  <!-- menu（非表示） -->
+  <div id="menu-open">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div id="menu">
+    <nav>
+      <ul>
+        <li><a href="#header">Home</a></li>
+        <li><a href="#profile">profile</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#artifact">artifact</a></li>
+        <!-- <li><a href="#">used tool</a></li> -->
+      </ul>
+    </nav>
+  </div>
+  <!-- ここまで -->
+
+  <main>
+    <section class="about">
+      <div class="container about-text">
+        <h2>about</h2>
+        <p>こちらはshoのポートフォリオサイトです。これまでに作成した成果物や学習したものについてまとめてみました。私のことを詳しく知っていただくために作成いたしました。どうぞご覧ください。</p>
+      </div>
+    </section>
+
+    <section id="profile" class="container profile">
+      <h2>profile</h2>
+      <div class="author">
+        <a href=""><img 
+          id="profile-img"
+          src="imgs/main/food.jpeg" 
+          olt="author"
+          width="250"
+          height="250">
+        </a>
+      </div>
+      <p>三重県出身。現在は千葉市在住。大学では教育学部・数学教育コースとして数学と学校教育について学んだ後、一度行ってみたいと思っていた飲食店業界へ転職。約2年後、退職をしフロントエンドエンジニアになりたいことを目標に勉強を行ってきました。学習では模写コーディングを中心にアウトプットを行い、できるだけ実務を行ったときに対応できるように意識して取り組んできました。</p>
+    </section>
+    
+    <section id="skills" class="container skills">
+      <h2>skills</h2>
+      <p>こちらでは学習したものに関して、大まかな習熟度と主要なスキルに関しての詳細を個人的な学習理解をもとにまとめてみました。</p>
+        <p>★★★・・・実践で利用できるレベル<br>★★☆・・・基本的な理解ができている<br>★☆☆・・・最低限の知識を理解している</p>
+      <article class="skills-table">
+        <table>
+          <thead class="language">
+            <tr>
+              <th>スキル名</th>
+              <th>習熟度</th>
+            </tr>
+          </thead>
+
+          <tbody class="language">
+            <tr>
+              <td>HTML & CSS</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span></td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span></td>
+            </tr>
+            <tr>
+              <td>PHP</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span></td>
+            </tr>
+            <tr>
+              <td>MySQL</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span>
+                <span><i class="bi bi-star"></i></span></td>
+            </tr>
+            <tr>
+              <td>Git</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table>
+          <thead class="tool">
+            <tr>
+              <th>ツール</th>
+              <th>習熟度</th>
+              <th>コメント</th>
+            </tr>
+          </thead>
+
+          <tbody class="tool">
+            <tr>
+              <td>UNIX command</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span></td>
+                <td>webpackやPHPの環境構築用</td>
+            </tr>
+            <tr>
+              <td>webpack</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span></td>
+                <td>scssやReact.jsの環境構築用</td>
+            </tr>
+            <tr>
+              <td>bavel</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span></td>
+                <td>webpackと併用して使用</td>
+            </tr>
+            <tr>
+              <td>react.js</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span></td>
+                <td>全体の文法の学習中心</td>
+            </tr>
+            <tr>
+              <td>vue.js</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span></td>
+                <td>全体の文法の学習中心</td>
+            </tr>
+            <tr>
+              <td>Scss</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span></td>
+                <td>全体の文法の学習中心</td>
+            </tr>
+            <tr>
+              <td>TypeScript</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span></td>
+                <td>全体の文法の学習中心</td>
+            </tr>
+            <tr>
+              <td>Node.js</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span></td>
+                <td>全体の文法の学習中心</td>
+            </tr>
+            <tr>
+              <td>Firebase</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span></td>
+                <td>全体の文法の学習中心</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table>
+          <thead class="other">
+            <tr>
+              <th>その他</th>
+              <th>習熟度</th>
+              <th>コメント</th>
+            </tr>
+          </thead>
+          
+          <tbody class="other"  >
+            <tr>
+              <td>SEO</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span>
+                <span><i class="bi bi-star"></i></span></td>
+                <td>webマーケティング概念理解</td>
+            </tr>
+            <tr>
+              <td>WordPress</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span>
+                <span><i class="bi bi-star"></i></span></td>
+                <td>CMS環境の概念理解</td>
+            </tr>
+            <tr>
+              <td>PhotoShop</td>
+              <td><span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span>
+                <span><i class="bi bi-star"></i></span></td>
+                <td>webデザインの概念理解</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article>
+        <p class="theme">【HTML & CSS】</p>
+        <p>基本的なタグの理解、アニメーション、フレックスボックス、レスポンシブ・ウェブデザイン、グリッドレイアウトについて学習しました。下で紹介している模写コーディングの中級編はコーディングはレスポンシブ対応入れて3時間程度で作成しました。</p>
+        <p class="theme">【JavaScript】</p>
+        <p>基礎的な文法の理解に加え、主要フレームワークの学習や、コンパイル・モジュール・npm等のモダンなJavaScriptについての歴史的背景や使用方法をYoutubeで学習しました。実際にscssのcssへの変換やreact.jsの変換、バージョン変更の仕方を実際に行ってみました。
+        </p>
+        <p class="theme">【PHP MySQL】</p>
+        <p>データベースと連動してCRUD機能の基本的なコーディングを学びました。</p>
+        <p class="theme">【Git】</p>
+        <p>共同学習で欠かせないgithubでの開発のための取り扱いを学びました。</p>
+      </article>
+
+    </section>
+
+    <section id="artifact" class="artifact container">
+      <h2>artifact</h2>
+      <p>こちらでは私の制作物をご紹介します。見本と練習用で分けています。主にHTML&CSSとJavaScriptを使用して作成しています。もし、模写コーディングしたいという方は活用してみてください!</p>
+
+      <article id="copy">
+        <p>【模写コーディング】</p>
+        <ul>
+          <li>ポートフォリオ</li>
+          <div class="file">
+            <li><a target="_blank" href="artifact/ジャバスクリプトWeb制作/ポートフォリオ/default/index.html">default</a></li>
+            <li><a target="_blank" href="artifact/ジャバスクリプトWeb制作/ポートフォリオ/practice/index.html">practice</a></li>
+          </div>
+        </ul>
+
+        <ul>
+          <li>アプリ紹介ページ</li>
+          <div class="file">
+            <li><a target="_blank" href="artifact/ジャバスクリプトWeb制作/アプリ紹介ページ/default/index.html">default</a></li>
+            <li><a target="_blank" href="artifact/ジャバスクリプトWeb制作/アプリ紹介ページ/practice/index.html">practice</a></li>
+          </div>
+        </ul>
+
+        <ul>
+          <li>ECサイト</li>
+          <div class="file">
+            <li><a target="_blank" href="artifact/ジャバスクリプトWeb制作/ECサイト/default/index.html">default</a></li>
+            <li><a target="_blank" href="artifact/ジャバスクリプトWeb制作/ECサイト/practice/index.html">practice</a></li>
+          </div>
+        </ul>
+
+        <ul>
+          <li>コーディングサイト中級編1</li>
+          <div class="file">
+            <li><a target="_blank" href="artifact/模写コーディング/ウェブサイトのコーディング　中級編１/default/index.html">default</a></li>
+            <li><a target="_blank" href="artifact/模写コーディング/ウェブサイトのコーディング　中級編１/practice/index.html">practice</a></li>
+          </div>
+        </ul>
+
+        <ul>
+          <li>コーディングサイト中級編2</li>
+          <div class="file">
+            <li><a target="_blank" href="artifact/模写コーディング/ウェブサイトのコーディング　中級編２/default/Top.html">default</a></li>
+            <li><a target="_blank" href="artifact/模写コーディング/ウェブサイトのコーディング　中級編２/practice/Top.html">practice</a></li>
+          </div>
+        </ul>
+      </article>
+
+      <article id="item">
+        <p>【制作品】</p>
+        <ul>
+          <li>カルーセル</li>
+          <div class="file">
+            <li><a target="_blank" href="artifact/カルーセル/index.html">practice</a></li>
+          </div>
+        </ul>
+
+        <ul>
+          <li>スライドショー</li>
+          <div class="file">
+            <li><a target="_blank" href="artifact/ジャバスクリプトミニゲーム/スライドショー/">practice</a></li>
+          </div>
+        </ul>
+
+        <ul>
+          <li>ビンゴシート</li>
+          <div class="file">
+            <li><a target="_blank" href="artifact/ジャバスクリプトミニゲーム/ビンゴシート/practice/index.html">practice</a></li>
+          </div>
+        </ul>
+
+        <ul>
+          <li>おみくじ</li>
+          <div class="file">
+            <li><a target="_blank" href="artifact/ジャバスクリプトミニゲーム/おみくじ/practice/index.html">practice</a></li>
+          </div>
+        </ul>
+      </article>
+     
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-area">
+      <nav class="footer-navi">
+        <article>
+          <ul class="page-move">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#profile">profile</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#artifact">artifact</a></li>
+          </ul>
+        </article>
+  
+        <article>
+          <ul class="sns">
+            <li><a><i class="bi bi-twitter"></i></a></li>
+            <li><a><i class="bi bi-instagram"></i></a></li>
+          </ul>
+        </article>
+      </nav>
+    
+      <small>© My Portfolio</small> 
+    </div>
+  </footer>
+  <a href="#" id="to-top"><i class="bi bi-arrow-up-square"></i></a>
+  <script src="js/menu.js"></script>
+  <script src="js/pageTop.js"></script>
+  <script src="js/API.js"></script>
+
+</body>
+</html>

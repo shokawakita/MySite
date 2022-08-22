@@ -1,0 +1,164 @@
+body{
+    margin: 0; 
+}
+
+ul {
+    padding-inline-start: unset;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+img {
+    width: 100%;
+    height: fit-content;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: unset;
+}
+
+.wrapper {
+    width: calc(100% - 32px);
+    max-width: 800px;
+    margin: 0 auto;
+} 
+
+/* header */
+header {
+    height: 70px;
+}
+.header-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-area img {
+    width: 150px;
+}
+
+.login {
+    display: flex;
+    justify-content: space-between;
+}
+.header-area ul {
+    text-align: center;
+}
+
+.header-area ul:nth-child(1){
+    padding-right: 5px;
+}
+
+.header-area ul i {
+    font-size: 1.2rem;
+}
+
+.header-area li a {
+    font-size: 0.8rem;
+}
+
+.bi-file-person {
+    border-radius: 50%;
+}
+
+.bi-search {
+    position: relative;
+    padding-left: 40%;
+}
+
+.header-area input {
+    width: 300px;
+    border: unset;
+    border-bottom: 1px solid rgb(83, 83, 83);
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+
+/* sample */
+.sample {
+    height: 400px;
+}
+
+.sample img {
+    height: 400px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity .6s;
+}
+
+.sample .current {
+    opacity: 1;
+}
+
+/* main */
+main {
+    padding: 60px 0;
+}
+main h2 {
+    font-weight: normal;
+}
+
+#view-more {
+    width: calc(100% - 250px);
+    padding: 16px;
+    margin: 30px auto;
+    text-align: center;
+    border: 1px solid rgb(227, 224, 224);
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    grid-row: auto;
+    gap: 15px 15px;
+    justify-content: space-between;
+}
+
+.content {
+    opacity: 1;
+    transition: opacity .3s;
+}
+.content:hover {
+    opacity: 0.7;
+}
+
+/* footer */
+footer {
+    background: rgb(99, 98, 98);
+    color: white;
+}
+
+.footer-area {
+    display: flex;
+    justify-content: space-between;
+    height: 55px;
+    align-items: center;
+}
+
+.icon {
+    font-size: 1.5rem;
+}
+
+@media(max-width: 800px){
+    .bi-search {
+        display: none;
+    }
+}
+
+@media(max-width: 600px){
+    .items {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    grid-row: auto;
+    gap: 15px 15px;
+    justify-content: space-between;
+    }
+}
