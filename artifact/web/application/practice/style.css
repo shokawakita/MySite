@@ -236,6 +236,7 @@ small {
 
     .contents {
         flex-direction: column-reverse;
+        align-items: center;
     }
     .contents img, .sec-text {
         width: 85%;

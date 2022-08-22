@@ -49,6 +49,7 @@ header {
 #profile {
     width: 30%;
     border-radius: 50%;
+    max-width: 150px;
 } 
 
 .header-text {
@@ -96,4 +97,14 @@ footer p {
 .works.appear {
     opacity: 1;
     transform: none; 
+}
+
+@media(max-width: 650px) {
+    .header-area {
+        text-align: center;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
 }

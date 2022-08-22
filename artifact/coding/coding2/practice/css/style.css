@@ -47,9 +47,9 @@ img {
     opacity: 0.8;
 }
 
-#menu-list {
+/* #menu-list {
     position: relative;
-}
+} */
 
 #menu-list ul {
     transform: translateX(-150px);
@@ -68,14 +68,10 @@ img {
     font-size: 0.9rem;
 }
 
-#open-btn {
-    position: relative;
-}
-
 #open {
     font-size: 3rem;
     position: absolute;
-    top: -20px;
+    top: 16px;
     right: 0;
     padding: 5px 0;
     opacity: 1;
@@ -98,7 +94,7 @@ img {
     position: absolute;
     top: 16px;
     left: auto;
-    right: 0;
+    right: 30px;
     cursor: pointer;
     z-index: 10;
     padding: 5px 0;
@@ -132,15 +128,11 @@ header {
 }
 
 /* common-footerのレイアウト */
-footer {
-    position: absolute;
-    left: 32px;
-    right: 32px;
-    padding-top: 70px;
-    padding-bottom: 20px;
+.footer-area {
     display: flex;
     justify-content: space-between;
     font-size: 0.8rem;
+    margin-bottom: 16px;
 }
 
 #sns {
@@ -268,9 +260,12 @@ main {
 }
 
 /* Aboutのスタイル */
+.about {
+    width: 90%;
+}
+
 .about p {
     padding-bottom: 30px; 
-    width: 600px;
 }
 
 .about p:first-child {
@@ -295,7 +290,7 @@ main {
 .company ul {
     display: flex;
     flex-wrap: wrap;
-    width: 600px;
+    width: 90%; 
     border-bottom: 1px solid rgb(204, 201, 201);
 }
 
@@ -319,19 +314,24 @@ main {
 #google-map {
     display: block;
     padding: 10px 0 30px 10px;
-    width: 600px;
+    max-width: 600px;
+    width: 90%;
     height: 300px;
 }
 
 /* レスポンシブデザイン */
 @media(max-width: 900px){
-    #item-list {
+    #item-list,
+    #item-list2 {
         grid-template-columns: repeat(2, auto);
         grid-row: auto;
 
     }
+
     footer {
         display: block;
         position: unset;
     }
+
+
 }
