@@ -22,11 +22,11 @@ li {
 }
 
 #next {
-  right: 8%;
+  right: 5%;
 }
 
 #prev {
-  left: 8%;
+  left: 5%;
 }
 
 .hidden {
@@ -56,7 +56,6 @@ nav {
 #slide {
   display: flex;
   height: 550px;
-  
   transform: none;
   transition: transform .3s;
 }
@@ -95,4 +94,28 @@ nav {
 
 .current {
   opacity: 0.6;
+}
+
+@media (max-width: 1000px){
+  main {
+    width: 270px;
+    height: 270px;
+  }
+
+  #slide {
+    height: 210px;
+  }
+
+  #next,#prev {
+    top: 32%;
+  }
+
+  #create button {
+    height: 15px;
+    width: 15px;
+  }
+
+  #create button + button {
+    margin-left: 8px;
+  }
 }
