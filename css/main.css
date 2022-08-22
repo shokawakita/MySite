@@ -124,6 +124,7 @@ main section + section {
 .skills-table table {
   border: 1px solid black; 
   padding: 16px;
+  margin: 64px 0;
 }
 
 .skills-table table tr th,
@@ -169,8 +170,8 @@ table tbody tr {
   padding-left: 72px;
 }
 
-.skills p .theme {
-  padding-top: 16px;
+.skills .theme {
+  padding-top: 32px;
   padding-bottom: 8px;
 }
 /* article */
@@ -182,16 +183,15 @@ table tbody tr {
   padding: 48px;
 }
 
-.artifact article {
+.artifact #item,
+.artifact #copy {
   border: 1px solid black;
-}
-
-#item {
   margin-top: 32px;
 }
 
 #copy,
-#item {
+#item,
+#quote {
   padding: 16px;
 }
 
@@ -213,6 +213,22 @@ table tbody tr {
 .file li {
   padding-left: 16px;
   color: blue;
+}
+
+.artifact #quote {
+  margin-top: 64px;
+}
+
+.artifact #quote ul {
+  margin: 0;
+}
+
+.artifact #quote ul li {
+  padding-top: 16px;
+}
+
+.artifact #quote li a{
+  font-size: 0.7rem;
 }
 
 @keyframes hero {
