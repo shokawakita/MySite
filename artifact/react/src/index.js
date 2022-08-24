@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 // カウンターのコンポーネントを作成する
 function Counter(props) {
@@ -16,7 +16,7 @@ function CounterList(props) {
     return (
     <Counter
       counter={counter}
-      key={counter.id}
+      key={counter.id}  
       countUp={props.countUp}
       />
     );
@@ -88,8 +88,13 @@ class App extends React.Component {
   }
 }
 
-// AppクラスをHTMLに変換
-ReactDOM.render(
-  <App/>,
-  document.getElementById('root')
-);
+// // AppクラスをHTMLに変換
+const container = document.getElementById('root');
+const root = createRoot(container); 
+root.render(<App />);
+
+
+// ReactDOM.render(
+//   <App/>,
+//   document.getElementById('root')
+// );
