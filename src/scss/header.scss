@@ -1,0 +1,95 @@
+/* --------------------------------- 
+header
+-----------------------------------*/
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 85px;
+  opacity: 0;
+  box-shadow: none;
+  z-index: 1;
+  background-color: white;
+  transition: background-color .5s, opacity .5s;
+  
+  .appear {
+    opacity: 0.95;
+    background-color: white;
+    box-shadow: 0 0 4px rgb(170, 170, 170);
+  }
+  
+  & > #header-logo {
+    display: flex;
+    align-items: center;
+    
+    & > #header-icon {
+      font-size: 32px;  
+    }
+    
+    & > h1 {
+      font-size: 24px;
+      font-weight: normal;
+    }
+  }
+}
+
+
+
+
+/* headerのposition: fixed;のための高さ調整 */
+/* #target {
+  height: 85px;
+} */
+
+/* ----------------------------
+menu
+----------------------------- */
+#menu-open {
+  width: 32px;
+  height: 26px;
+  position: fixed;
+  top: 32px;
+  right: 6%;
+  left: auto;
+  cursor: pointer;
+  z-index: 3;
+  
+  span {
+    position: absolute;
+    background-color: black;
+    width: 35px;
+    height: 2px;
+    top: 0;
+    right: 0;
+    transform: none;
+    opacity: 1;
+    transition: all .3s;  
+    
+    &:nth-child(2) {
+      top: 12px;
+    }
+    
+    &:nth-child(3) {
+      top: 24px;
+    }
+  }
+
+  .hidden span {
+    top: 12px;
+    
+    &:nth-child(1){
+      transform: rotate(-135deg);
+    }
+    
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    
+    &:nth-child(3){
+      transform: rotate(135deg);
+    }
+  }
+}
+
+

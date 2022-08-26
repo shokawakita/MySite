@@ -1,6 +1,6 @@
 'use strict';
 
-{
+export default function API() {
   const profile = document.getElementById('profile-img');
   const skillsImgs = document.querySelectorAll('.skills-imgs img');
   
@@ -21,3 +21,4 @@
     observers.observe(skill);
   });
 }
+

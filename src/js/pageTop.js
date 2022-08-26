@@ -1,6 +1,6 @@
 'use strict';
 
-{
+export default function pageTop() {
   // Intersectionobserverでheaderとto-topを監視する
   const pageTop = document.getElementById('to-top');
   const header = document.querySelector('header');

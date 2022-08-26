@@ -1,6 +1,6 @@
 'use strict';
 
-{
+export default function menu() {
   // difinition
   const open = document.getElementById('menu-open');
   const ul = document.querySelector('#menu > nav > ul');

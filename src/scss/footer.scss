@@ -1,0 +1,41 @@
+/* --------------------------------- 
+footer
+-----------------------------------*/
+
+footer {
+  padding: 16px 0 32px 0;
+  background-color: rgb(236, 255, 206);
+  box-shadow: 0 -2px #eee;
+}
+
+.footer-area {
+  text-align: center;
+  
+  .footer-navi {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 64px;
+    
+    .page-move {
+      padding-top: 32px;
+      padding-left: 32px;
+      
+      li + li {
+        padding-top: 12px;
+      }
+    }
+    
+    .sns {
+      display: flex;
+      margin-top: 96px;
+      
+      li + li {
+        padding-left: 32px;
+      } 
+    }
+  }
+}
+
+
+
+
