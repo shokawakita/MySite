@@ -1,8 +1,4 @@
-@import url("common.scss");
-@import url("header.scss");
-@import url("footer.scss");
-@import url("menu.scss");
-@import url("pageback.scss");
+
 
 /* hero */
 
@@ -46,7 +42,9 @@
   height: 600px;
   text-align: center;
   border-top: 1px solid #eee;
-  background-color: rgb(236, 255, 206);
+  background-image: url(../../imgs/main/background_image.png);
+  background-repeat: repeat-x;
+  background-position: center;
   padding: 128px 0;
   
   h2 {

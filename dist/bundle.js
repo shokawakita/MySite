@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/scss/main.scss\");\n/* harmony import */ var _API__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./API */ \"./src/js/API.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu */ \"./src/js/menu.js\");\n/* harmony import */ var _pageTop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pageTop */ \"./src/js/pageTop.js\");\n\n\n\n\n(0,_API__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_menu__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n(0,_pageTop__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n\n//# sourceURL=webpack://sassproject/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_common_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/common.scss */ \"./src/scss/common.scss\");\n/* harmony import */ var _scss_header_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/header.scss */ \"./src/scss/header.scss\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/scss/main.scss\");\n/* harmony import */ var _scss_footer_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../scss/footer.scss */ \"./src/scss/footer.scss\");\n/* harmony import */ var _scss_menu_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../scss/menu.scss */ \"./src/scss/menu.scss\");\n/* harmony import */ var _scss_pageback_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../scss/pageback.scss */ \"./src/scss/pageback.scss\");\n/* harmony import */ var _API__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./API */ \"./src/js/API.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./menu */ \"./src/js/menu.js\");\n/* harmony import */ var _pageTop__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pageTop */ \"./src/js/pageTop.js\");\n\n\n\n\n\n\n\n\n\n(0,_API__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\n(0,_menu__WEBPACK_IMPORTED_MODULE_7__[\"default\"])();\n(0,_pageTop__WEBPACK_IMPORTED_MODULE_8__[\"default\"])();\n\n//# sourceURL=webpack://sassproject/./src/js/index.js?");
 
 /***/ }),
 
@@ -50,6 +50,36 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/scss/common.scss":
+/*!******************************!*\
+  !*** ./src/scss/common.scss ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://sassproject/./src/scss/common.scss?");
+
+/***/ }),
+
+/***/ "./src/scss/footer.scss":
+/*!******************************!*\
+  !*** ./src/scss/footer.scss ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://sassproject/./src/scss/footer.scss?");
+
+/***/ }),
+
+/***/ "./src/scss/header.scss":
+/*!******************************!*\
+  !*** ./src/scss/header.scss ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://sassproject/./src/scss/header.scss?");
+
+/***/ }),
+
 /***/ "./src/scss/main.scss":
 /*!****************************!*\
   !*** ./src/scss/main.scss ***!
@@ -57,6 +87,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://sassproject/./src/scss/main.scss?");
+
+/***/ }),
+
+/***/ "./src/scss/menu.scss":
+/*!****************************!*\
+  !*** ./src/scss/menu.scss ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://sassproject/./src/scss/menu.scss?");
+
+/***/ }),
+
+/***/ "./src/scss/pageback.scss":
+/*!********************************!*\
+  !*** ./src/scss/pageback.scss ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://sassproject/./src/scss/pageback.scss?");
 
 /***/ })
 

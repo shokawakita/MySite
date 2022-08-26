@@ -1,6 +1,6 @@
-/*!****************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/scss/common.scss ***!
-  \****************************************************************************************************/
+/*!*******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/common.scss ***!
+  \*******************************************************************************************************************************************/
 /* --------------------------------- 
 common
 -----------------------------------*/
@@ -50,21 +50,19 @@ h2 {
   padding: 64px 0;
 }
 
-
 /* z-index */
-
 /* 
 header 2
 header > #menu-open 4
 #menu 3
 */
-/*!****************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/scss/header.scss ***!
-  \****************************************************************************************************/
+/*!*******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/header.scss ***!
+  \*******************************************************************************************************************************************/
+
 /* --------------------------------- 
 header
 -----------------------------------*/
-
 header {
   position: fixed;
   top: 0;
@@ -74,35 +72,29 @@ header {
   box-shadow: none;
   z-index: 1;
   background-color: white;
-  transition: background-color .5s, opacity .5s;
+  transition: background-color 0.5s, opacity 0.5s;
 }
-
-header.appear {
+header .appear {
   opacity: 0.95;
   background-color: white;
   box-shadow: 0 0 4px rgb(170, 170, 170);
 }
-
 header > #header-logo {
   display: flex;
   align-items: center;
 }
-
-header #header-logo > #header-icon {
+header > #header-logo > #header-icon {
   font-size: 32px;
-  
 }
-header #header-logo > h1 {
+header > #header-logo > h1 {
   font-size: 24px;
   font-weight: normal;
 }
-
 
 /* headerのposition: fixed;のための高さ調整 */
 /* #target {
   height: 85px;
 } */
-
 /* ----------------------------
 menu
 ----------------------------- */
@@ -116,7 +108,6 @@ menu
   cursor: pointer;
   z-index: 3;
 }
-
 #menu-open span {
   position: absolute;
   background-color: black;
@@ -126,164 +117,25 @@ menu
   right: 0;
   transform: none;
   opacity: 1;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-
 #menu-open span:nth-child(2) {
   top: 12px;
 }
 #menu-open span:nth-child(3) {
   top: 24px;
 }
-
-#menu-open.hidden span {
+#menu-open .hidden span {
   top: 12px;
 }
-
-#menu-open.hidden span:nth-child(1){
+#menu-open .hidden span:nth-child(1) {
   transform: rotate(-135deg);
 }
-
-#menu-open.hidden span:nth-child(2) {
+#menu-open .hidden span:nth-child(2) {
   opacity: 0;
 }
-
-#menu-open.hidden span:nth-child(3){
+#menu-open .hidden span:nth-child(3) {
   transform: rotate(135deg);
-}
-
-/*!****************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/scss/footer.scss ***!
-  \****************************************************************************************************/
-/* --------------------------------- 
-footer
------------------------------------*/
-
-footer {
-  padding: 16px 0 32px 0;
-  background-color: rgb(236, 255, 206);
-  box-shadow: 0 -2px #eee;
-}
-
-.footer-area {
-  text-align: center;
-}
-
-.footer-navi {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 64px;
-}
-
-.page-move {
-  padding-top: 32px;
-  padding-left: 32px;
-}
-
-.page-move li + li {
-  padding-top: 12px;
-}
-
-
-.sns {
-  display: flex;
-  margin-top: 96px;
-}
-.sns li + li {
-  padding-left: 32px;
-} 
-
-/*!**************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/scss/menu.scss ***!
-  \**************************************************************************************************/
-/* --------------------------------- 
-menu
------------------------------------*/
-
-#menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgb(225, 225, 225);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .3s;
-  z-index: 2;
-}
-
-#menu > nav {
-  margin-left: 45%;
-}
-
-#menu >nav > ul {
-  padding-top: 150px;
-  width: 150px;
-}
-
-#menu > nav > ul li {
-  user-select: none;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transform: translateY(30px);
-  opacity: 0;
-  transition: opacity .3s, transform .3s;
-}
-
-#menu > nav > ul li + li {
-  padding-top: 20px;
-}
-
-/* -------------menuに関するanimation------------- */
-/* menu-iconクリック時のmenuの表示 */
-#menu.appear {
-  pointer-events: auto;
-  opacity: .95;
-}
-
-
-/* -----------------menuリストのanimation-------------------- */
-
-
-#menu.appear > nav > ul li  {
-  transform: none;
-  opacity: 1;
-}
-
-#menu.appear > nav > ul li:nth-child(1) {
-  transition-delay: .1s;
-}
-
-#menu.appear > nav > ul li:nth-child(2) {
-  transition-delay: .2s;
-}
-
-#menu.appear > nav > ul li:nth-child(3) {
-  transition-delay: .3s;
-}
-
-#menu.appear > nav > ul li:nth-child(4) {
-  transition-delay: .4s;
-}
-
-#menu.appear > nav > ul li:nth-child(5) {
-  transition-delay: .5s;
-}
-/*!******************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/scss/pageback.scss ***!
-  \******************************************************************************************************/
-#to-top {
-  position: fixed;
-  right: 16px;
-  bottom: 16px;
-  font-size: 32px;
-  cursor: pointer;
-  display: none;  
-}
-
-#to-top.appear {
-  display: block;
 }
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
@@ -326,7 +178,9 @@ menu
   height: 600px;
   text-align: center;
   border-top: 1px solid #eee;
-  background-color: rgb(236, 255, 206);
+  background-image: url(../../imgs/main/background_image.png);
+  background-repeat: repeat-x;
+  background-position: center;
   padding: 128px 0;
 }
 .about h2 {
@@ -544,4 +398,115 @@ main section + section {
 #profile-img .appear:hover,
 .skills-imgs img .appear:hover {
   opacity: 0.8;
+}
+/*!*******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/footer.scss ***!
+  \*******************************************************************************************************************************************/
+/* --------------------------------- 
+footer
+-----------------------------------*/
+footer {
+  padding: 16px 0 32px 0;
+  background-color: rgb(236, 255, 206);
+  box-shadow: 0 -2px #eee;
+}
+
+.footer-area {
+  text-align: center;
+}
+.footer-area .footer-navi {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 64px;
+}
+.footer-area .footer-navi .page-move {
+  padding-top: 32px;
+  padding-left: 32px;
+}
+.footer-area .footer-navi .page-move li + li {
+  padding-top: 12px;
+}
+.footer-area .footer-navi .sns {
+  display: flex;
+  margin-top: 96px;
+}
+.footer-area .footer-navi .sns li + li {
+  padding-left: 32px;
+}
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/menu.scss ***!
+  \*****************************************************************************************************************************************/
+
+/* --------------------------------- 
+menu
+-----------------------------------*/
+#menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(225, 225, 225);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 2;
+  /* -------------menuに関するanimation------------- */
+  /* menu-iconクリック時のmenuの表示 */
+}
+#menu > nav {
+  margin-left: 45%;
+}
+#menu > nav > ul {
+  padding-top: 150px;
+  width: 150px;
+}
+#menu > nav > ul li {
+  user-select: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+#menu > nav > ul li + li {
+  padding-top: 20px;
+}
+#menu .appear {
+  pointer-events: auto;
+  opacity: 0.95;
+  /* -----------------menuリストのanimation-------------------- */
+}
+#menu .appear > nav > ul li {
+  transform: none;
+  opacity: 1;
+}
+#menu .appear > nav > ul li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+#menu .appear > nav > ul li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+#menu .appear > nav > ul li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+#menu .appear > nav > ul li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+#menu .appear > nav > ul li:nth-child(5) {
+  transition-delay: 0.5s;
+}
+/*!*********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/pageback.scss ***!
+  \*********************************************************************************************************************************************/
+#to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  font-size: 32px;
+  cursor: pointer;
+  display: none;
+}
+#to-top .appear {
+  display: block;
 }

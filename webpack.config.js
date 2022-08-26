@@ -51,5 +51,10 @@ module.exports = {
             // この場合はdistフォルダにstyle.cssという名前でコンパイルする
             filename: 'style.css',
         })
-    ]
+    ],
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname,'dist'),
+        }
+    },
 };
