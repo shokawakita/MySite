@@ -1,6 +1,18 @@
-
-
 /* hero */
+// @mixin paddingSet($set) {
+//   padding: $set;
+// }
+// @mixin animationStart($start) {
+//   transform: translateY(30px);
+//   opacity: 0;
+//   transition: .3s;
+// }
+// @mixin animationEnd($end) {
+//   transform: translateY(30px);
+//   opacity: 0;
+//   transition: transform .3s, opacity .3s;
+// }
+
 
 .hero {
   min-height: 700px;
@@ -42,9 +54,7 @@
   height: 600px;
   text-align: center;
   border-top: 1px solid #eee;
-  background-image: url(../../imgs/main/background_image.png);
-  background-repeat: repeat-x;
-  background-position: center;
+  background: rgb(236, 255, 206);
   padding: 128px 0;
   
   h2 {
@@ -292,7 +302,7 @@ main {
   opacity: 0;
   transition: transform .3s, opacity .3s;
 
-  .appear {
+  &.appear {
     transform: none;
     opacity: 1;
     

@@ -37,33 +37,15 @@ menu
   }
   /* -------------menuに関するanimation------------- */
   /* menu-iconクリック時のmenuの表示 */
-  .appear {
+  &.appear {
     pointer-events: auto;
     opacity: .95;
     /* -----------------menuリストのanimation-------------------- */
-    
-    & > nav > ul li  {
-      transform: none;
-      opacity: 1;
-      
-      &:nth-child(1) {
-        transition-delay: .1s;
-      }
-      
-      &:nth-child(2) {
-        transition-delay: .2s;
-      }
-      
-      &:nth-child(3) {
-        transition-delay: .3s;
-      }
-      
-      &:nth-child(4) {
-        transition-delay: .4s;
-      }
-      
-      &:nth-child(5) {
-        transition-delay: .5s;
+    @for $i from 1 through 5 {
+      nav > ul > li:nth-child(#{$i}) {
+        transition-delay: calc(#{$i} * 0.1s);
+        transform: none;
+        opacity: 1;
       }
     }
   }

@@ -13,7 +13,7 @@ header {
   background-color: white;
   transition: background-color .5s, opacity .5s;
   
-  .appear {
+  &.appear {
     opacity: 0.95;
     background-color: white;
     box-shadow: 0 0 4px rgb(170, 170, 170);
@@ -33,9 +33,6 @@ header {
     }
   }
 }
-
-
-
 
 /* headerのposition: fixed;のための高さ調整 */
 /* #target {
@@ -75,7 +72,7 @@ menu
     }
   }
 
-  .hidden span {
+  &.hidden span {
     top: 12px;
     
     &:nth-child(1){
